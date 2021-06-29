@@ -1,5 +1,4 @@
 :root{
-
     --primary-color:#1f0437;
     --lighter-shade:#3B2D67;
     --more-lighter:#3B2D67;
@@ -13,10 +12,9 @@
    --transition: all 0.3s linear;
    --spacing: 0.25rem;
    --radius: 0.5rem;
-
-   /* font color */
+/* font color */
    --font-clr:#343a40;
-   /* font */
+ /* font */
 --f-primary:'Raleway', sans-serif;
 --f-secondary:'Roboto', sans-serif;
 }
@@ -31,6 +29,7 @@ html {
     padding: 0;
     box-sizing: border-box;
   }
+
   body {
     font-family: var(--f-secondary);
     background: var(--great-white);
@@ -43,9 +42,18 @@ html {
 ul {
     list-style-type: none;
   }
-  a {
+  .links > a{
     text-decoration: none;
+    color:var(--great-white);
+    z-index:99;
+    font-size:1.25rem;
+    text-align:center;
+    text-transform: capitalize;
+    font-family: var(--f-primary);
+    cursor:pointer;
   }
+ 
+  
   img:not(.logo) {
     width: 100%;
   }
@@ -61,6 +69,7 @@ h4 {
   line-height: 1.25;
   margin-bottom: 0.75rem;
   font-family: var(--f-primary);
+  color:var(--great-white);
 }
 h1 {
   font-size: 3rem;

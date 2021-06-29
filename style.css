@@ -1,0 +1,144 @@
+
+header{
+    background:linear-gradient(130deg,  #2a0845 ,rgba(131, 164, 272, 0.2) ),url("images/children-214437_1920.jpg");
+    background-size:cover;
+    height:100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:relative;
+    background-attachment: fixed;
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    height:100px;
+    padding:1rem;
+}
+
+.header-section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:6rem 2rem;
+}
+.header-part-1{
+    padding:2rem 4rem;
+}
+.header-part-2{
+    padding:3rem 1rem;
+    display:flex;
+    gap:20px;
+}
+
+
+/* utilities */
+.toggle{
+    display:none;
+}
+.logo{
+    width:200px;
+    height:auto;
+    display:block;
+}
+.btn-main{
+    padding:12px 30px;
+    border:0;
+    background:var(--darker-yellow);
+    margin:0;
+    opacity:0.7;
+    cursor:pointer;
+    border-radius: 50px;
+    text-transform: uppercase;
+    color:var(--more-lighter);
+}
+.nav-links{
+display: flex;
+align-items: center;
+gap:40px;
+    
+}
+
+.fa-bars{
+    font-size:2.5rem;
+    color:var(--dark-white);
+padding-top:10px;
+
+}
+  nav > .list-open{
+    position:fixed;
+    top:100px;
+    left:0;
+    right:0;
+    bottom:0;
+   display:grid;
+   place-items: center;
+    background:var(--more-lighter);
+    margin:30px;
+  border-radius: 40px; 
+  z-index: 99;
+  }
+
+  .fixed{
+      position:fixed;
+      top:0;
+      display:flex;
+      gap:50px;
+      background:var(--primary-color);
+      left:0;
+      right:0;
+      z-index:99;
+
+  }
+  .fixed .logo{
+      width:180px;
+  }
+ 
+
+  .member{
+      padding:12px 28px;
+      background:var(--darker-yellow);
+      border:0;
+      border-radius:30px;
+      color:var(--more-lighter);
+      text-transform: capitalize;
+      cursor:pointer;
+     
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* 
+  */
+  @media  screen and (max-width:760px){
+.nav-links{
+    display:none;
+}
+
+.member{
+    padding:14px 20px;
+    background:var(--red);
+    border:0;
+    border-radius:30px;
+    color:var(--great-white);
+    text-transform: uppercase;
+    font-weight:700;
+    cursor:pointer;
+    display:block; 
+     width:80%;
+}
+  }
+      
