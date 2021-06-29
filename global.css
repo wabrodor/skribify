@@ -53,7 +53,8 @@ ul {
     cursor:pointer;
   }
  
-  
+  /* @media screen and(max-width:) */
+
   img:not(.logo) {
     width: 100%;
   }
