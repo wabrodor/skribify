@@ -9,7 +9,7 @@
    --white:#fff;
    --dark-white:#e5e5e5;
    --great-white:#e9ecef;
-   --transition: all 0.3s linear;
+   --transition: all 0.4s ease-in;
    --spacing: 0.25rem;
    --radius: 0.5rem;
 /* font color */
@@ -74,6 +74,7 @@ h4 {
 }
 h1 {
   font-size: 3rem;
+  text-align:center;
 }
 h2 {
   font-size: 2rem;
@@ -85,7 +86,7 @@ h4 {
   font-size: 0.875rem;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 850px) {
     h1 {
       font-size: 4rem;
     }
