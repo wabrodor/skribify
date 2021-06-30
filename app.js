@@ -4,7 +4,8 @@ AOS.init();
 
 const mobileMenu = document.querySelector(".nav-links")
 const toggle = document.querySelector(".toggle")
-const fixed = document.querySelector(".fixed")
+// const fixed = document.querySelector(".fixed")
+const nav = document.getElementById("nav")
 
 
 // events
@@ -15,7 +16,14 @@ toggle.addEventListener("click", ()=>{
 
 window.addEventListener("scroll",() =>{
 
-// console.log(getBoundingClientReact())
+const height = window.pageYOffset
+const navHeight = nav.getBoundingClientRect().height
+if(height > navHeight){
+nav.classList.add("fixed");
+}
+else{
+  nav.classList.remove("fixed")
+}
 })
 // preloader
 

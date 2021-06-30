@@ -42,7 +42,37 @@ nav{
 
 /* header section end*/
 
+
+
+
+.sect-1{
+    display:grid;
+    padding:0.5rem;
+    grid-template-columns: 50% 50%;
+}
+.part-1{
+    padding:1rem 2rem;
+}
+.part-2{
+    padding:1rem 2rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
 /* ******second section */
+
+footer{
+    background-color:#5000ca;
+    padding-top:2rem;
+    display:grid;
+    grid-template-rows:80% 20%;
+    color:var(--white);
+    
+}
+svg{
+    margin-bottom:-10px;
+}
 
 
 @media screen and (max-width:800px){
@@ -50,12 +80,13 @@ nav{
     /* header section start*/
 
     .header-section{
-        padding:5rem 1rem;
+        padding:5rem 0.5rem;
         line-height:1.5;
      
     }
     .header-part-1 {
-        padding-top:2rem;
+        padding: 0;
+        margin:0;
     }
     .header-part-2{
         display:block;
@@ -63,6 +94,17 @@ nav{
     }
 
     /* header section end*/
+
+    .sect-1{
+        display:flex;
+       flex-direction: column;
+    }
+
+    .part-2{
+        padding:1rem 1rem;
+        
+     
+    }
 }
 /* sections */
 
@@ -152,14 +194,65 @@ padding-top:10px;
     font-family: var(--f-primary);
     cursor:pointer;
   }
+ .title{
+     color:var(--yellow);
+ }
+
+ .card{
+     background:linear-gradient(90deg,#ff1852a4, #09077ca4);
+     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.55);
+     padding:2rem;
+     border-radius:20px;
+
+ }
+ .card-title> h2{
+     color:var(--light-yellow);
+     text-align: center;
+ }
+ .card-pargraph{
+     color:var(--great-white);
+     font-size:1.15rem;
+     padding:1rem 0;
+     line-height: 2;
+     text-align: center;
+     text-transform: capitalize;
+ }
+ .follow{
+     padding:1rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+ }
+
  
+ .follow-btn > button{
+     display:block;
+     width:100%;
+     padding-top:15px;
+     text-align:center;
+ }
 
+ .follow-icon{
+     font-size:1.5rem;
+     margin-right:10px;
+ }
 
+.important{
+    color:var(--light-yellow)
+}
 
-
-
-
-
+.information{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:50px;
+}
+.copyright{
+    text-align: center;
+    padding:2rem 0;
+    background:var(--primary-color);
+}
 
 
 
@@ -178,8 +271,10 @@ padding-top:10px;
 }
 
 
- /* 
-  */
+
+
+
+
   @media  screen and (max-width:760px){
 .nav-links{
    display: none;
@@ -242,6 +337,9 @@ padding-top:10px;
   .key{
     font-size:1rem;
     margin-left:10px;
+  }
+  .information{
+      flex-direction:column;
   }
 }
       
