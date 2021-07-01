@@ -6,12 +6,25 @@ const mobileMenu = document.querySelector(".nav-links")
 const toggle = document.querySelector(".toggle")
 // const fixed = document.querySelector(".fixed")
 const nav = document.getElementById("nav")
+const toggleSwitch = document.querySelector(".fa-bars")
 
 
 // events
 
 toggle.addEventListener("click", ()=>{
-  mobileMenu.classList.toggle("list-active")
+ 
+
+  if(toggleSwitch.classList.contains("fa-bars")){
+    toggleSwitch.classList.remove("fa-bars")
+    toggleSwitch.classList.add("fa-times-circle")
+  }else{
+    toggleSwitch.classList.remove("fa-times-circle")
+    toggleSwitch.classList.add("fa-bars")
+  }
+
+ 
+    
+ mobileMenu.classList.toggle("list-active");
 })
 
 window.addEventListener("scroll",() =>{
