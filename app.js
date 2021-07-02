@@ -7,9 +7,12 @@ const toggle = document.querySelector(".toggle")
 // const fixed = document.querySelector(".fixed")
 const nav = document.getElementById("nav")
 const toggleSwitch = document.querySelector(".fa-bars")
+const footerText = document.querySelector(".copyright")
 
+const date = new Date().getFullYear;
 
 // events
+footerText.innerHTML = `<p> &copy ${2021} Skribfy all right reserved <br> [developed by suhail wabrodor] </p>`
 
 toggle.addEventListener("click", ()=>{
  

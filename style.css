@@ -7,7 +7,7 @@
 header{
     background:linear-gradient(130deg,  #2a0845 ,rgba(131, 164, 272, 0.2) ),url("https://cdn.pixabay.com/photo/2019/04/30/12/34/smart-4168483_960_720.jpg");
     background-size:cover;
-    height:100vh;
+    min-height:100vh;
     background-position: center;
     background-repeat: no-repeat;
     position:relative;
@@ -17,7 +17,7 @@ nav{
     display:flex;
     align-items:center;
     justify-content: space-between;
-    height:100px;
+    max-height:100px;
     padding:1rem;
     overflow:hidden;
     z-index: 100;
@@ -98,7 +98,9 @@ svg{
 @media screen and (max-width:800px){
 
     /* header section start*/
-
+nav{
+    max-height: 80px;
+}
     .header-section{
         padding:5rem 0.5rem;
         line-height:1.5;
@@ -156,6 +158,15 @@ svg{
     color:var(--white);
 }
 
+.sub-title{
+color:var(--white);
+margin-top:20px;
+font-size:1.5rem;
+text-transform: capitalize;
+font-family:var(--f-primary);
+
+}
+
 .borderd-btn{
     background:transparent;
     border:2px solid var(--great-white);
@@ -172,9 +183,11 @@ gap:40px;
 }
 
 .toggle > i{
-    font-size:2.2rem;
+    font-size:2rem;
     color:var(--dark-white);
 padding-top:10px;
+transition:var(--transition);
+cursor: pointer;
 
 }
  
@@ -428,6 +441,9 @@ transform: translateY(-5px);
 
 .credit-1 > p{
     font-size:1rem;
+}
+.logo{
+    max-width:130px;
 }
 }
       
