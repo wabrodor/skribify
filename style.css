@@ -358,10 +358,8 @@ button:not(.member):hover{
 
  .list-open{
     position:fixed;
-    top:100px;
-    left:0;
-    right:0;
-    bottom:0;
+    inset:0;
+ top:100px;
    display:grid;
    place-items: center;
     background:var(--more-lighter);
