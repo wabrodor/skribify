@@ -48,11 +48,11 @@ nav{
 .sect-1{
     display:grid;
     padding:0.5rem;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 40%;
     margin-top:4rem;
 }
 .part-1{
-    padding:1rem 8rem;
+    padding:1rem 5rem;
 
 }
 .part-2{
@@ -90,12 +90,12 @@ svg{
 }
 .part-1 > img{
 
-    max-width:90%;
+    max-width:100%;
     margin:0 auto;
 }
 
 
-@media screen and (max-width:800px){
+@media screen and (max-width:910px){
 
     /* header section start*/
 nav{
