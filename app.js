@@ -8,6 +8,14 @@ const toggle = document.querySelector(".toggle")
 const nav = document.getElementById("nav")
 const toggleSwitch = document.querySelector(".fa-bars")
 const footerText = document.querySelector(".copyright")
+const links = document.querySelectorAll(".links")
+links.forEach(btn =>{
+  btn.addEventListener("click", () =>{
+    mobileMenu.classList.remove("list-active");
+    toggleSwitch.classList.remove("fa-times-circle")
+    toggleSwitch.classList.add("fa-bars")
+  })
+})
 
 const date = new Date().getFullYear;
 
@@ -29,6 +37,8 @@ toggle.addEventListener("click", ()=>{
     
  mobileMenu.classList.toggle("list-active");
 })
+
+
 
 window.addEventListener("scroll",() =>{
 

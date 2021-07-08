@@ -40,6 +40,7 @@ nav{
     gap:80px;
 }
 
+
 /* header section end*/
 
 
@@ -156,6 +157,9 @@ nav{
     border-radius: 80px;
     text-transform: uppercase;
     color:var(--white);
+}
+.nav-link{
+    color:#000;
 }
 
 .sub-title{
@@ -327,11 +331,11 @@ button:not(.member):hover{
     transform:translateY(-2px);
     background:var(--primary-color);
 }
-.member:hover{
-    transform:scale(1.1);
-    background:transparent;
-    border:1px solid #ffff;
-    color:var(--white);
+.member:hover {
+    transform:scale(1.2);
+    background:#fff;
+    opacity: 0.8;
+  
 }
 
 @media screen and (max-width:930px){
@@ -354,6 +358,9 @@ button:not(.member):hover{
   @media  screen and (max-width:760px){
 .nav-links{
    display: none;
+}
+.nav-link{
+    color:#fff;
 }
 
  .list-open{
