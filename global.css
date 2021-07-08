@@ -58,6 +58,10 @@ ul {
   img:not(.logo) {
     width: 100%;
   }
+  a{
+    text-decoration: none;
+    color:#fff;
+  }
   img {
     display: block;
   }
