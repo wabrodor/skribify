@@ -38,6 +38,7 @@ nav{
     padding:4rem 1rem;
     display:flex;
     gap:80px;
+    margin-top:1rem;
 }
 
 
@@ -328,6 +329,11 @@ button{
 
 }
 button:not(.member):hover{
+    transform:translateY(-2px);
+    background:var(--primary-color);
+}
+
+.btn-main:hover{
     transform:translateY(-2px);
     background:var(--primary-color);
 }
