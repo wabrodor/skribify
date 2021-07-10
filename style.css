@@ -38,7 +38,7 @@ nav{
     padding:4rem 1rem;
     display:flex;
     gap:80px;
-    margin-top:1rem;
+
 }
 
 
@@ -115,6 +115,7 @@ nav{
     .header-part-2{
         display:block;
         padding:1rem;
+        margin-top:1rem;
     }
 
     /* header section end*/
@@ -432,9 +433,10 @@ transform: translateY(-5px);
     padding:1rem;
   }
   .btn-main{
-      padding:14px 20px;
+      padding:14px 22px;
       margin-top:30px;
       width:100%;
+      display:block;
 
   }
   .key{
