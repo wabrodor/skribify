@@ -345,6 +345,10 @@ button:not(.member):hover{
   
 }
 
+ .btn-main{
+    margin:1rem;
+}
+
 @media screen and (max-width:930px){
     .links > a{
     
@@ -352,6 +356,8 @@ button:not(.member):hover{
         font-size:1rem;
     
       }
+
+    
       .nav-links{
           gap:20px;
       }
