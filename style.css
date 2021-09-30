@@ -461,6 +461,7 @@ line-height: 1.5;
 .icon-para > p{
     color:#d9e1e7;
     text-align: center;
+    text-transform:capitalize;
 
 }
 
