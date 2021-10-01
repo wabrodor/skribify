@@ -4,11 +4,26 @@ AOS.init();
 
 const mobileMenu = document.querySelector(".nav-links")
 const toggle = document.querySelector(".toggle")
+
+const cards = document.querySelectorAll(".body-section")
 // const fixed = document.querySelector(".fixed")
 const nav = document.getElementById("nav")
 const toggleSwitch = document.querySelector(".fa-bars")
 const footerText = document.querySelector(".copyright")
 const links = document.querySelectorAll(".links")
+
+// functions
+
+//  for sending link
+
+cards.forEach(card =>{
+  card.addEventListener("click", ()=>{
+  window.location.href = "https://app.skribfy.com"
+  })
+})
+
+
+
 links.forEach(btn =>{
   btn.addEventListener("click", () =>{
     mobileMenu.classList.remove("list-active");
