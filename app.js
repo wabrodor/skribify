@@ -32,10 +32,10 @@ links.forEach(btn =>{
   })
 })
 
-const date = new Date().getFullYear;
+const date = new Date().getFullYear();
 
 // events
-footerText.innerHTML = `<p> &copy ${2021} Skribfy all right reserved <br> [developed by suhail wabrodor] </p>`
+footerText.innerHTML = `<p> &copy ${date} Skribfy all right reserved <br> [developed by suhail wabrodor] </p>`
 
 toggle.addEventListener("click", ()=>{
  
