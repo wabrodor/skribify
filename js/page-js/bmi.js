@@ -57,6 +57,7 @@ btn.addEventListener("click", (e)=>{
       
         percent.style.width = result + "%"
         percent.style.transition = "1.2s all ease-in";
+        window.scrollTo(0,0);
         result = 0;
     },2000)
 
