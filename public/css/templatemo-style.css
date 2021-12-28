@@ -44,7 +44,7 @@ margin-top:20px;
 
 
 .page-heading {
-  background-image: url(../img/heading_bg.png);
+  background-image: url(img/heading_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -635,9 +635,8 @@ footer p a {
     background: -moz-linear-gradient(to right, #1626FF 0%, #CF1512 75%);
     background: linear-gradient(to right, #1626FF 0%, #CF1512 75%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-align: left;
-    text-transform: capitalize;
 }
 .footer_sect--grid ul {
   list-style-type: none;
@@ -721,7 +720,7 @@ margin-right:2rem;
 
 
 .more-about-us {
-  background-image: url(../img/about_us.png);
+  background-image: url(img/about_us.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

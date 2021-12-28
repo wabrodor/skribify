@@ -1,0 +1,91 @@
+---
+layout: "base.njk"
+---
+
+    <nav>
+        <div class="logo">
+            <a href="/index.html"><img src="/img/logo.png" alt="logo"></a>
+        </div>
+        <div class="menu-icon">
+        <span></span>
+      </div>
+    </nav>
+
+    <section class="form-container">
+
+        <form action="" class="wrapper needs-validation" novalidate>
+     <div class="heading-sect form-sect">
+      <p class="form-heading">
+        bmi calculator
+      </p>
+    
+      <p class="sub-heading">Body Mass Index (BMI) Is A Measure Of Body Fat Based On Height And Weight That Applies To Adult Men And Women. View The BMI Tables Or Use The Tool Below To Compute Yours.</p>
+     </div>
+ 
+
+  <div class="form-sect">
+  <label for="age">age</label>
+  <input id = "age" type="number" name="age"placeholder = "your age" class="form-control" required />
+  </div>
+
+<div class="form-sect">
+  <label for="height">height</label>
+  <input id = "height" type="number" name="height" placeholder = "in centimeters (cm)" class="form-control"  required/>
+</div>
+
+<div class="form-sect">
+  <label for="weight">weight</label>
+  <input id = "weight" type="number" name="weight" placeholder = "in kilograms (kg)" class="form-control" required />
+</div>
+<button class="btn" type="submit">check</button>
+
+
+
+        </form>
+
+<div class="wrapper  result-sect">
+  <h2>Your result</h2>
+        
+  <div class="result">
+      <p class= "result-bmi">your BMI = </p>
+      <p class="result-category"><span class = "result-color"></span></p>
+  </div>
+  
+  <div class="progress">
+      <div class="progress-bar">
+  0
+      </div>
+  </div>
+  
+  <div class="action">
+  <h2>what next</h2>
+  
+      <p>Maintaining a healthy weight is important for your heart health.</p>
+      <p>learn more about at<a href="https://www.nhlbi.nih.gov/health-topics/overweight-and-obesity"> overweight and obesity</a></p>
+  
+  </div>   
+  
+  <div class="reset">
+  <button type="submit" class= "replay">check again</button>
+  </div>
+</div>
+        <div class="details">
+          <h2>BMI Categories:</h2>
+          <p>Underweight = less than 18.5</p>
+           <p>Normal weight = 18.5–24.9</p> 
+           <p> Overweight = 25–29.9</p>
+       <p> Obesity = BMI of 30 or greater</p>
+         
+       <h2>Refernce and Materials</h2>
+       <p><a href="https://www.who.int/tools/growth-reference-data-for-5to19-years/indicators/bmi-for-age">refernces link-1</a></p>
+       <p><a href="https://en.wikipedia.org/wiki/Body_mass_index">refernces link-2</a></p>
+
+       
+        </div>
+        
+        <div class="loader hide-form">
+      <img src="/img/giphy.gif" alt="loader">
+        </div>
+
+    </section> 
+<script src="/js/page-js/bmi.js"></script>   

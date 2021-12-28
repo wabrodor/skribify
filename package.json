@@ -1,0 +1,28 @@
+{
+  "name": "skribify",
+  "version": "1.0.0",
+  "description": "health calculator",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wabrodor/skribfy.git"
+  },
+  "author": "suhail wabrodor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wabrodor/skribfy/issues"
+  },
+  "homepage": "https://github.com/wabrodor/skribfy#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  },
+  "dependencies": {
+    "cli": "^1.0.1",
+    "netlify": "^10.1.0",
+    "nunjucks": "^3.2.3"
+  }
+}

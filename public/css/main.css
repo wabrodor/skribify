@@ -35,6 +35,7 @@
     background: -moz-linear-gradient(to right, #1626FF 0%, #CF1512 75%);
     background: linear-gradient(to right, #1626FF 0%, #CF1512 75%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
