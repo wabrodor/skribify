@@ -191,20 +191,19 @@ label{
 
 input{
     border:1px solid rgb(47, 167, 107);
-    background:rgba(255, 255, 255, 0.205) !important;
+    background:rgba(255, 255, 255, 0.062) !important;
     border-radius: 10px;
     color:#fff !important;
     padding:0.5rem;
 
 }
 input::placeholder{
-    color:rgba(255, 255, 255, 0.712);
+    color:rgba(221, 115, 54, 0.812);
 }
 
 input:focus-within{
     border:1px solid rgb(47, 167, 107);
     outline:0;
-    color:#fff;
 }
 
 input:focus{
@@ -311,19 +310,24 @@ text-align:center;
 }
 
 .result-sect{
-    display:none
+    display:none;
+    text-align:center;
 }
 .display-result{
     display:block;
+    text-align: center;
 }
-
-
-
-
 
 
 .hide-form{
     display:none;
+}
+
+
+/*  */
+.menstrual-container{
+    margin-top:100px;
+
 }
 
 @media (max-width:1100px){

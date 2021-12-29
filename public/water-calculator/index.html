@@ -3,57 +3,132 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  		<title>skribfy</title>
-<!-- 
+  		<title>skribfy</title> 
 
--->
+
         <meta name="description" content="The best way to manage your health is to know your numbers. Use these calculators to find out your BMI, protein, and fat intake and calculate your body mass index (BMI), protein, fat, and cholesterol levels.">
         <meta name="keywords" content="healt, fitness, bmi, protein-intake, diabetes">
         <meta name="viewport" content="width=device-width, initial-scale=1">
       
-        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-<link rel="manifest" href="img/manifest.json">
+        <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#000">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-        <link rel="stylesheet" href="css/templatemo-style.css">
+        <link rel="stylesheet" href="/css/templatemo-style.css">
 
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="/css/main.css">
 
         <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
 
-<body class="privacy-policy">
+<body class = "">
 
-    <nav>
+<nav class="">
         <div class="logo">
-            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            <a href="/"><img src="/img/logo.png" alt="logo"></a>
         </div>
         <div class="menu-icon">
         <span></span>
       </div>
     </nav>
 
+<section class ="form-container">
+
+        <form action="" class="wrapper needs-validation" novalidate>
+     <div class="heading-sect form-sect">
+      <p class="form-heading">
+        water calculator
+      </p>
+    
+      <p class="sub-heading">You can use this water intake calculator to approximate the amount of water you need to consume in relation to the amount of time you will exercise and your body weight</p>
+     </div>
+ 
+
+  <div class="form-sect">
+  <label for="weight"> weight </label>
+  <input id = "weight" type="number" name="weight" placeholder = "your weight in kg" class="form-control" required >
+  </div>
+
+<div class="form-sect">
+  <label for="activity">daily activity in minutes/day</label>
+  <input id = "activity" type="number" name="activity" placeholder = "daily activity in minutes" class="form-control" min="0" max="100" required>
+</div>
+
+
+<button class="btn" type="submit">check</button>
+
+</form>
+
+<div class="wrapper  result-sect">
+  <h2>Your results</h2>
+    <p> in cups are calculated using imperial units </p>
+  <div class="result">
+
+     
+  </div>
+  
+
+  
+  <div class="action">
+  <h2>what next</h2>
+  
+      <p>Water makes up an estimated 60% of your body weight. It is a critical chemical component that your body depends on to survive.
+
+The organs, tissues, and cells that form your body require water to function. If you do not consume sufficient water, you will become dehydrated, and this will impact your body's ability to work properly. Even minor cases of dehydration can leave you feeling lethargic and lacking energy.</p>
+      <p>learn more about at<a href="https://www.scirp.org/(S(351jmbntvnsjt1aadkposzje))/reference/referencespapers.aspx?referenceid=1803573"> water intake study</a></p>
+      
+  
+  </div>   
+  
+  <div class="reset">
+  <button type="submit" class = "replay">check again</button>
+  </div>
+</div>
+        <div class="details">
+          <h2>average amount of water you needed per day</h2>
+          <p>Your body uses water throughout the day. It is eliminated through perspiration, sweating, urine, bowel movements, and even breathing.</p>
+           <p>According to the National Academies of Sciences, Engineering, and Medicine, the required daily fluid intake for an adult is as follows</p> 
+           <p>Females: 2.7 liters (11.5 cups) &  Males: 3.7 liters (15.5 cups)</p>
+           <p> The quantities outlined above include the water consumed via drinks and food. In the majority of cases, around 20% of the daily fluid intake is derived from food, and the remainder comes from drinks.</p>
+       
+  
+       <h2>Refernce and Materials</h2>
+       <p><a href="https://www.scirp.org/(S(351jmbntvnsjt1aadkposzje))/reference/referencespapers.aspx?referenceid=106592">reference link-1</a></p>
+       <p><a href="https://www.scirp.org/(S(351jmbntvnsjt1aadkposzje))/reference/referencespapers.aspx?referenceid=1803573">refernces link-2</a></p>
+
+       
+        </div>
+        
+        <div class="loader hide-form">
+      <img src="/img/giphy.gif" alt="loader">
+        </div>
+
+
+    </section> 
+
+<script defer src="/js/page-js/water-calculator.js"></script>  
+   
 
 
 
@@ -78,7 +153,6 @@
                     <li><i class="fas fa-fire-alt"></i><a href="about.html">about us</a></li>
                     <li><i class="fas fa-fire-alt"></i><a href="faq.html">faq</a></li>
                     <li><i class="fas fa-fire-alt"></i><a href="privacy-policy.html">privacy and policy</a></li>
-                    <li><i class="fas fa-fire-alt"></i><a href="terms.html">Terms and conditions</a></li>
                 </ul>
           
 
@@ -111,14 +185,15 @@
                     <a href="instagram.com/skribfy"> <i class="fas fa-envelope-square"></i></a>
   
                 </div>
-                <img class=""src="img/SKRIBFY logo.png" alt="logo">
+
+                <img class=""src="/img/logo.png" alt="logo">
              
                 </article>
             </div>
             <div class="col-md-12">
                 <p>Copyright &copy; skribfy 2021
     
-    | Designed and developed by <a href="https://www.instagram.com/suhail_wabrodor/">suhail-wabrodor</a></p>
+    | developed by <a href="https://www.instagram.com/suhail_wabrodor/">suhail-wabrodor</a></p>
             </div>
         </div>
     </footer>
@@ -126,7 +201,7 @@
 
       <!-- Modal button -->
     <div class="popup-icon">
-      <button id="modBtn" class="modal-btn"><img src="img/contact-icon.png" alt=""></button>
+      <button id="modBtn" class="modal-btn"><img src="/img/contact-icon.png" alt=""></button>
     </div>  
 
     <!-- Modal -->
@@ -136,7 +211,7 @@
         <!-- Modal Header -->
         <div class="modal-header">
           <h3 class="header-title">Say hello to <em>skribfy</em></h3>
-          <div class="close-btn"><img src="img/close_contact.png" alt=""></div>    
+          <div class="close-btn"><img src="/img/close_contact.png" alt=""></div>    
         </div>
         <!-- Modal Body -->
         <div class="modal-body">
@@ -189,6 +264,7 @@
                 </li>
                 
 
+              
                 <li>
                     <a href="privacy-policy.html">Privacy and policy</a>
                 </li>
@@ -203,13 +279,18 @@
       </div>
     </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <div class="cookie-container disable-cookie">
+        <p>
+            we use cookies in this website to give you the best experience on our site and show you relevent ads. to find out more, read our <a href="privacy-policy.html">privacy policy</a> and <a href="cookie.html">cookie policy</a>
+        </p>
+        <button class="btn-cookie ">okay</button>
+    </div>
 
-    <script src="js/vendor/bootstrap.min.js"></script>
-    
-    <script src="js/main.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> 
 
+    <script src="/js/vendor/bootstrap.min.js"></script>
     
+    <script src="/js/main.js"></script>
 </body>
 </html>

@@ -3,67 +3,132 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  		<title>skribfy</title>
-<!-- 
+  		<title>skribfy</title> 
 
--->
+
         <meta name="description" content="The best way to manage your health is to know your numbers. Use these calculators to find out your BMI, protein, and fat intake and calculate your body mass index (BMI), protein, fat, and cholesterol levels.">
         <meta name="keywords" content="healt, fitness, bmi, protein-intake, diabetes">
         <meta name="viewport" content="width=device-width, initial-scale=1">
       
-        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-<link rel="manifest" href="img/manifest.json">
+        <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#000">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-        <link rel="stylesheet" href="css/templatemo-style.css">
+        <link rel="stylesheet" href="/css/templatemo-style.css">
 
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="/css/main.css">
 
         <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
 
-<body class="privacy-policy">
+<body class = "">
 
-    <nav>
+<nav class="">
         <div class="logo">
-            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            <a href="/"><img src="/img/logo.png" alt="logo"></a>
         </div>
         <div class="menu-icon">
         <span></span>
       </div>
     </nav>
 
+     <section class="form-container">
+
+        <form action="" class="wrapper needs-validation" novalidate>
+     <div class="heading-sect form-sect">
+      <p class="form-heading">
+        ideal weight calculator
+      </p>
+    
+      <p class="sub-heading">The Ideal Weight Calculator computes ideal body weight (IBW) ranges based on height, gender.</p>
+     </div>
+ 
+
+  <div class="form-sect">
+  <label for="gender"> gender </label>
+  <input id = "gender" type="text" name="gender"placeholder = "male or female" class="form-control" required >
+  </div>
+
+<div class="form-sect">
+  <label for="height">height</label>
+  <input id = "height" type="number" name="height" placeholder = "in centimeters (cm)" class="form-control"  required>
+</div>
 
 
+<button class="btn" type="submit">check</button>
+
+</form>
+
+<div class="wrapper  result-sect">
+  <h2>Your result</h2>
+    <p> based on robbinson, miller, devine & hamwi </p>
+  <div class="result">
+      <p class= "result-bmi">your BMI = </p>
+     
+  </div>
+  
+
+  
+  <div class="action">
+  <h2>what next</h2>
+  
+      <p>Maintaining a healthy weight is important for your heart health.</p>
+      <p>learn more about at<a href="https://www.nhlbi.nih.gov/health-topics/overweight-and-obesity"> overweight and obesity</a></p>
+      <p> article related to deal weight and bmi <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4841935/"> articles</a></p>
+      
+  
+  </div>   
+  
+  <div class="reset">
+  <button type="submit" class = "replay">check again</button>
+  </div>
+</div>
+        <div class="details">
+          <h2>Ideal Weight Calculator:</h2>
+          <p>we will show your ideal weight in different classifications</p>
+           <p>ROBINSON</p> 
+           <p> MILLER</p>
+           <p> DEVINE</p>
+            <p>HAMWI</p>
+       <p></p>
+         
+       <h2>Refernce and Materials</h2>
+       <p><a href="https://www.bmi-calculator.net/ideal-weight-calculator/robinson-formula/e">refernces link-1</a></p>
+       <p><a href="https://www.cdc.gov/diabetes/managing/healthy-weight.html">refernces link-2</a></p>
+
+       
+        </div>
+        
+        <div class="loader hide-form">
+      <img src="/img/giphy.gif" alt="loader">
+        </div>
 
 
+    </section> 
 
-
-
-
-
-
+<script defer src="/js/page-js/ideal-weight.js"></script>  
+   
 
     <footer>
         <div class="container-fluid">
@@ -78,7 +143,6 @@
                     <li><i class="fas fa-fire-alt"></i><a href="about.html">about us</a></li>
                     <li><i class="fas fa-fire-alt"></i><a href="faq.html">faq</a></li>
                     <li><i class="fas fa-fire-alt"></i><a href="privacy-policy.html">privacy and policy</a></li>
-                    <li><i class="fas fa-fire-alt"></i><a href="terms.html">Terms and conditions</a></li>
                 </ul>
           
 
@@ -111,14 +175,15 @@
                     <a href="instagram.com/skribfy"> <i class="fas fa-envelope-square"></i></a>
   
                 </div>
-                <img class=""src="img/SKRIBFY logo.png" alt="logo">
+
+                <img class=""src="/img/logo.png" alt="logo">
              
                 </article>
             </div>
             <div class="col-md-12">
                 <p>Copyright &copy; skribfy 2021
     
-    | Designed and developed by <a href="https://www.instagram.com/suhail_wabrodor/">suhail-wabrodor</a></p>
+    | developed by <a href="https://www.instagram.com/suhail_wabrodor/">suhail-wabrodor</a></p>
             </div>
         </div>
     </footer>
@@ -126,7 +191,7 @@
 
       <!-- Modal button -->
     <div class="popup-icon">
-      <button id="modBtn" class="modal-btn"><img src="img/contact-icon.png" alt=""></button>
+      <button id="modBtn" class="modal-btn"><img src="/img/contact-icon.png" alt=""></button>
     </div>  
 
     <!-- Modal -->
@@ -136,7 +201,7 @@
         <!-- Modal Header -->
         <div class="modal-header">
           <h3 class="header-title">Say hello to <em>skribfy</em></h3>
-          <div class="close-btn"><img src="img/close_contact.png" alt=""></div>    
+          <div class="close-btn"><img src="/img/close_contact.png" alt=""></div>    
         </div>
         <!-- Modal Body -->
         <div class="modal-body">
@@ -189,6 +254,7 @@
                 </li>
                 
 
+              
                 <li>
                     <a href="privacy-policy.html">Privacy and policy</a>
                 </li>
@@ -203,13 +269,18 @@
       </div>
     </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <div class="cookie-container disable-cookie">
+        <p>
+            we use cookies in this website to give you the best experience on our site and show you relevent ads. to find out more, read our <a href="privacy-policy.html">privacy policy</a> and <a href="cookie.html">cookie policy</a>
+        </p>
+        <button class="btn-cookie ">okay</button>
+    </div>
 
-    <script src="js/vendor/bootstrap.min.js"></script>
-    
-    <script src="js/main.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> 
 
+    <script src="/js/vendor/bootstrap.min.js"></script>
     
+    <script src="/js/main.js"></script>
 </body>
 </html>

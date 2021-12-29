@@ -1,0 +1,80 @@
+---
+layout: "base.njk"
+---
+
+     <section class="form-container">
+
+        <form action="" class="wrapper needs-validation" novalidate>
+     <div class="heading-sect form-sect">
+      <p class="form-heading">
+        ideal weight calculator
+      </p>
+    
+      <p class="sub-heading">The Ideal Weight Calculator computes ideal body weight (IBW) ranges based on height, gender.</p>
+     </div>
+ 
+
+  <div class="form-sect">
+  <label for="gender"> gender </label>
+  <input id = "gender" type="text" name="gender"placeholder = "male or female" class="form-control" required >
+  </div>
+
+<div class="form-sect">
+  <label for="height">height</label>
+  <input id = "height" type="number" name="height" placeholder = "in centimeters (cm)" class="form-control"  required>
+</div>
+
+
+<button class="btn" type="submit">check</button>
+
+</form>
+
+<div class="wrapper  result-sect">
+  <h2>Your result</h2>
+    <p> based on robbinson, miller, devine & hamwi </p>
+  <div class="result">
+      <p class= "result-bmi">your BMI = </p>
+     
+  </div>
+  
+
+  
+  <div class="action">
+  <h2>what next</h2>
+  
+      <p>Maintaining a healthy weight is important for your heart health.</p>
+      <p>learn more about at<a href="https://www.nhlbi.nih.gov/health-topics/overweight-and-obesity"> overweight and obesity</a></p>
+      <p> article related to deal weight and bmi <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4841935/"> articles</a></p>
+      
+  
+  </div>   
+  
+  <div class="reset">
+  <button type="submit" class = "replay">check again</button>
+  </div>
+</div>
+        <div class="details">
+          <h2>Ideal Weight Calculator:</h2>
+          <p>we will show your ideal weight in different classifications</p>
+           <p>ROBINSON</p> 
+           <p> MILLER</p>
+           <p> DEVINE</p>
+            <p>HAMWI</p>
+       <p></p>
+         
+       <h2>Refernce and Materials</h2>
+       <p><a href="https://www.bmi-calculator.net/ideal-weight-calculator/robinson-formula/e">refernces link-1</a></p>
+       <p><a href="https://www.cdc.gov/diabetes/managing/healthy-weight.html">refernces link-2</a></p>
+
+       
+        </div>
+        
+        <div class="loader hide-form">
+      <img src="/img/giphy.gif" alt="loader">
+        </div>
+
+
+    </section> 
+
+<script defer src="/js/page-js/ideal-weight.js"></script>  
+   
