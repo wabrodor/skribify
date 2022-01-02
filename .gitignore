@@ -3,4 +3,9 @@ node_modules
 # Local Netlify folder
 .netlify
 
-public
+
+# exclude everything
+public/*
+
+# exception to the rule
+!public/.gitignore
