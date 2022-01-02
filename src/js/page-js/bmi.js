@@ -62,7 +62,7 @@ btn.addEventListener("click", (e)=>{
         percent.style.transition = "1.2s all ease-in";
         window.scrollTo(0,0);
         result = 0;
-    },2000)
+    },500)
 
   }else{
    alert("value must be greater than 0")

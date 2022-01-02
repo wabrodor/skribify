@@ -17,7 +17,6 @@ btn.addEventListener("click", (e)=>{
  
 
 const ounces = parseInt(calculateWater(weight.value, activity.value))
-
 const litres = roundDown((ounces/33.82), 2)
 const cups = roundDown((litres * 3.51), 2)
 
@@ -34,17 +33,14 @@ const cups = roundDown((litres * 3.51), 2)
         loader.classList.add("hide-form")
         formSection.classList.add("hide-form")
         resultSection.classList.add("display-result")
-    }, 1000)
+    }, 500)
         
     })
     
     replay.addEventListener("click", (e)=>{ 
       e.preventDefault()
-      formSection.classList.remove("hide-form")
-      resultSection.classList.remove("display-result")
+      reset(weight, activity)
       result.innerHTML= ""
-      weight.value = ""
-      activity.value = ""
     })
 
     function calculateWater(weight, activity){

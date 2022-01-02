@@ -30,6 +30,7 @@ replay.addEventListener("click", (e)=>{
 
 async function  getIdealWeightData(genderValue, height){
   try {
+    loader.classList.remove("hide-form")
     const url = `https://fitness-calculator.p.rapidapi.com/idealweight?gender=${genderValue}&height=${height.value}`
     
         const request = await fetch(url, {
@@ -41,7 +42,7 @@ async function  getIdealWeightData(genderValue, height){
         
        const response = await request.json()
     
-       loader.classList.remove("hide-form")
+   
         result.innerHTML = `<p class = "result result-bmi">Robinson = ${response.data.Robinson}</p>
         <p class = "result  result-bmi">Miller = ${response.data.Miller}</p>
         <p class = "result result-bmi">Devine = ${response.data.Devine}</p>
@@ -49,11 +50,10 @@ async function  getIdealWeightData(genderValue, height){
     
     setTimeout(() =>{
       if(response)
-          loader.classList.add("hide-form")
           formSection.classList.add("hide-form")
           resultSection.classList.add("display-result")
-        
-    }, 1000)
+          loader.classList.add("hide-form")
+    }, 500)
         
     }catch(error){
       console.log(error)

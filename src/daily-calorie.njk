@@ -1,0 +1,101 @@
+---
+layout: "base.njk"
+---
+
+<section class ="form-container">
+
+        <form action="" class="wrapper needs-validation" novalidate>
+     <div class="heading-sect form-sect">
+      <p class="form-heading">
+       Daily calorie Intake Calculator
+      </p>
+    
+     </div>
+ 
+
+  <div class="form-sect">
+  <label for="age"> age </label>
+  <input id = "age" type="number" name="age" placeholder = "your age" class="form-control" >
+  </div>
+
+    <div class="form-sect">
+  <label for="gender"> gender </label>
+  <input id = "gender" type="text" name="gender" placeholder = "male or female" class="form-control" required >
+  </div>
+
+     <div class="form-sect">
+  <label for="weight"> weight </label>
+  <input id = "weight" type="number" name="age" placeholder = "weight in kg" class="form-control" required >
+  </div>
+
+    <div class="form-sect">
+  <label for="height"> height </label>
+  <input id = "height" type="number" name="height" placeholder = "height in cm" class="form-control" required >
+  </div>
+
+<div class="form-sect">
+  <label for="activity">your activitry level</label>
+   <select name="activity" id="activity">
+  <option value="level_1">Sedentary: little or no exercise</option>
+   <option value="level_2">Exercise 1-3 times/week</option>
+    <option value="level_3">Exercise 4-5 times/week”</option>
+     <option value="level_4">Daily exercise or intense exercise 3-4 times/week</option>
+      <option value="level_5">Intense exercise 6-7 times/week</option>
+       <option value="level_6">Intense exercise 6-7 times/week</option>
+</select>
+
+</div>
+
+
+<button class="btn" type="submit">check</button>
+
+  <p class="sub-heading">Our body is burning calories every day with respect to activity level. Knowing your daily calorie requirements is important to achieve your final goal. You can calculate your daily calorie req. for 7 different goals. These goals are maintain, mild-lose, normal-lose, extreme loss, mild-gain, normal-gain, extreme gain weight.</p>
+</form>
+
+<div class="wrapper  result-sect">
+  <h2>Your results</h2>
+    <p> in cups are calculated using imperial units </p>
+  <div class="result">
+
+  </div>
+  
+
+  
+  <div class="action">
+  <h2>what next</h2>
+  
+      <p>Water makes up an estimated 60% of your body weight. It is a critical chemical component that your body depends on to survive.
+
+The organs, tissues, and cells that form your body require water to function. If you do not consume sufficient water, you will become dehydrated, and this will impact your body's ability to work properly. Even minor cases of dehydration can leave you feeling lethargic and lacking energy.</p>
+      <p>learn more about at<a href="https://www.scirp.org/(S(351jmbntvnsjt1aadkposzje))/reference/referencespapers.aspx?referenceid=1803573"> water intake study</a></p>
+      
+  
+  </div>   
+  
+  <div class="reset">
+  <button type="submit" class = "replay">check again</button>
+  </div>
+</div>
+        <div class="details">
+          <h2>average amount of water you needed per day</h2>
+          <p>Your body uses water throughout the day. It is eliminated through perspiration, sweating, urine, bowel movements, and even breathing.</p>
+           <p>According to the National Academies of Sciences, Engineering, and Medicine, the required daily fluid intake for an adult is as follows</p> 
+           <p>Females: 2.7 liters (11.5 cups) &  Males: 3.7 liters (15.5 cups)</p>
+           <p> The quantities outlined above include the water consumed via drinks and food. In the majority of cases, around 20% of the daily fluid intake is derived from food, and the remainder comes from drinks.</p>
+       
+  
+       <h2>Refernce and Materials</h2>
+       <p><a href="https://www.scirp.org/(S(351jmbntvnsjt1aadkposzje))/reference/referencespapers.aspx?referenceid=106592">reference link-1</a></p>
+       <p><a href="https://www.scirp.org/(S(351jmbntvnsjt1aadkposzje))/reference/referencespapers.aspx?referenceid=1803573">refernces link-2</a></p>
+
+       
+        </div>
+        
+        <div class="loader hide-form">
+      <img src="/img/giphy.gif" alt="loader">
+        </div>
+
+
+    </section> 
+
+<script defer src="/js/page-js/daily-calorie.js"></script>  

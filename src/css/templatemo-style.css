@@ -87,6 +87,7 @@ p{
   backdrop-filter: blur(50px);
   background:rgba(0,0,0, 0.8);
   }
+  
   .loader > img{
       width:300px;
       height:auto;
@@ -360,7 +361,7 @@ nav {
   object-fit: cover;
   max-width: 100%;
   overflow: hidden;
-  height:auto;
+  height:fit-content;
 }
 
 .portfolio-item .thumb {

@@ -8,9 +8,8 @@ const weight = document.querySelector("#weight")
 const height = document.querySelector("#height")
 const gender = document.querySelector("#gender")
 const age = document.querySelector("#age")
-const neck = document.querySelector("#neck")
-const waist = document.querySelector("#waist")
-const hip = document.querySelector("#hip")
+const activity = document.querySelector("#activity")
+const option = activity.options[activity.selectedIndex]
 
 
 btn.addEventListener("click", async (e)=>{
@@ -23,7 +22,7 @@ btn.addEventListener("click", async (e)=>{
     if ((height.value < 130  || height.value > 230 ||  height.value === "")) return
     // if ((genderValue = "female") || (genderValue = "male")) return
     try {
-    const url = `https://fitness-calculator.p.rapidapi.com/bodyfat?age=${age.value}&gender=${genderValue}&weight=${weight.value}&height=${height.value}&neck=${neck.value}&waist=${waist.value}&hip=${hip.value}`
+    const url = `https://fitness-calculator.p.rapidapi.com/dailycalorie?age=${age.value}&gender=${genderValue}&weight=${weight.value}&height=${height.value}&activitylevel=${option.value}`
     
         const request = await fetch(url, {
           "headers": {
@@ -33,20 +32,16 @@ btn.addEventListener("click", async (e)=>{
         })
         
        const response = await request.json()
-       console.log(response.data["Body Fat Mass"])
-       console.log(response.data)
+       const data = response.data
        loader.classList.remove("hide-form")
-        result.innerHTML = `<p class = "result result-bmi">Body Fat (U.S Navy method) = ${response.data["Body Fat (U.S. Navy Method)"]}%</p>
-        <p class = "result result-bmi"> Body Fat Mass = ${response.data["Body Fat Mass"]} Kg</p>
-        <p class = "result result-bmi"> Lean Body Mass =  ${response.data["Lean Body Mass"]}Kg </p>
-        <p class = "result result-bmi"> Body Fat (BMI method) =  ${response.data["Body Fat (BMI method)"]}% </p>`
     
     setTimeout(() =>{
-      if(response)
-          loader.classList.add("hide-form")
+          
           formSection.classList.add("hide-form")
           resultSection.classList.add("display-result")
-        
+          result.innerHTML  = `<p class = "result result-bmi">Basic metabolic rate = ${data.BMR}</p>
+          <p class = "result result-bmi">for extreme weight gain = ${data.goals["Extreme weight gain"].calory} calories</p>`
+          loader.classList.add("hide-form")
     }, 500)
         
     }catch(error){
@@ -59,5 +54,5 @@ btn.addEventListener("click", async (e)=>{
     replay.addEventListener("click", (e)=>{ 
         e.preventDefault()
         result.innerHTML= ""
-        reset(height, gender, age, weight, neck, hip, waist)
+        reset(height, gender, age, weight)
       })
