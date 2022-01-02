@@ -4,8 +4,6 @@ node_modules
 .netlify
 
 
-# exclude everything
-public/*
 
 # exception to the rule
 !public/.gitignore
