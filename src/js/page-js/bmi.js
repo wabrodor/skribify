@@ -18,7 +18,10 @@ const replay = document.querySelector(".replay");
 
 btn.addEventListener("click", (e)=>{
   e.preventDefault()
-  if(!(age.value > 0 && age.value < 100)) return
+  if(!(age.value > 0 && age.value < 100)) {
+    alert("error")
+    return
+  }
   if(height.value > 0 && weight.value > 0) {
     loader.classList.remove("hide-form")
 
@@ -66,6 +69,7 @@ btn.addEventListener("click", (e)=>{
    height.value = "";
    weight.value = "";
    age.value = "";
+   return
   }
   })
 
@@ -73,13 +77,10 @@ btn.addEventListener("click", (e)=>{
 
 replay.addEventListener("click", (e)=>{ 
   e.preventDefault()
-  formSection.classList.remove("hide-form")
-  resultSection.classList.remove("display-result")
-  result = 0;
   percent.textContent = "";
   percent.style.width = 0 + "%"
   resultColor.textContent = ""
-  height.value = ""
-  weight.value = ""
-  age.value = ""
+  result = 0;
+  reset(height, weight, age)
 })
+

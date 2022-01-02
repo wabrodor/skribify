@@ -2,6 +2,9 @@
 
 const cookie = document.querySelector(".cookie-container")
 const cookieBtn = document.querySelector(".btn-cookie")
+const alert = document.querySelector(".alert")
+const alertBtn = document.querySelector(".alert-content").children[1];
+
 
 cookieBtn.addEventListener("click", ()=>{
   localStorage.setItem("cookieEnabled", "true")
@@ -14,6 +17,21 @@ setTimeout(() => {
   }
 }, 2000);
 
+
+alertBtn.addEventListener("click", (e)=>{
+  reset(height, gender)
+  alert.classList.add("dismiss")
+  
+})
+
+function reset(height,...all){
+  formSection.classList.remove("hide-form")
+  resultSection.classList.remove("display-result") 
+  height.value = ""
+  for(let i = 0; i < all.length; i++){
+    all[i].value = ""
+  }
+}
 
 
 

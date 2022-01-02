@@ -1,0 +1,104 @@
+---
+layout: "base.njk"
+---
+
+
+    <section class="form-container">
+        <form action="" class="wrapper needs-validation" novalidate>
+     <div class="heading-sect form-sect">
+      <p class="form-heading">
+       body fat calculator
+      </p>
+    
+     
+     </div>
+ 
+  <div class="form-sect">
+  <label for="gender">gender</label>
+  <input id = "gender" type="text" name="gender"placeholder = "your gender" class="form-control" required />
+  </div>
+
+  <div class="form-sect">
+  <label for="age">age</label>
+  <input id = "age" type="number" name="age"placeholder = "your age" class="form-control" required />
+  </div>
+
+<div class="form-sect">
+  <label for="height">height</label>
+  <input id = "height" type="number" name="height" placeholder = "in centimeters (cm)" class="form-control"  required/>
+</div>
+
+<div class="form-sect">
+  <label for="weight">weight</label>
+  <input id = "weight" type="number" name="weight" placeholder = "in kilograms (kg)" class="form-control" required />
+</div>
+
+<div class="form-sect">
+  <label for="neck">neck circumference</label>
+  <input id = "neck" type="number" name="neck" placeholder = "in centimeters (cm)" class="form-control" required />
+</div>
+
+<div class="form-sect">
+  <label for="waist">waist circumference</label>
+  <input id = "waist" type="number" name="waist" placeholder = "in centimeters (cm)" class="form-control" required />
+</div>
+
+<div class="form-sect">
+  <label for="hip">hip circumference</label>
+  <input id = "hip" type="number" name="hip" placeholder = "in centimeters (cm)" class="form-control" required />
+</div>
+
+<button class="btn" type="submit">check</button>
+
+ <p class="sub-heading">Body composition refers to the proportion of fat you have, relative to lean tissue (muscles, bones, body water, organs, etc). This measurement is a clearer indicator of your fitness. No matter what you weigh, the higher percentage of body fat you have, the more likely you are to develop obesity-related diseases, including heart disease, high blood pressure, stroke, and type 2 diabetes etc.</p>
+ 
+</form>
+
+<div class="wrapper  result-sect">
+  <h2>Your result</h2>
+        
+  <div class="result">
+      <p class= "result-bmi">your BMI = </p>
+      <p class="result-category"><span class = "result-color"></span></p>
+  </div>
+  
+  
+  <div class="action">
+  <h2>what next</h2>
+  
+      <p>Maintaining a healthy weight is important for your heart health.</p>
+      <p>learn more about at<a href="https://www.nhlbi.nih.gov/health-topics/overweight-and-obesity"> overweight and obesity</a></p>
+  
+  </div>   
+  
+  <div class="reset">
+  <button type="submit" class= "replay">check again</button>
+  </div>
+</div>
+        <div class="details">
+          <h2>BMI Categories:</h2>
+          <p>Underweight = less than 18.5</p>
+           <p>Normal weight = 18.5–24.9</p> 
+           <p> Overweight = 25–29.9</p>
+       <p> Obesity = BMI of 30 or greater</p>
+         
+       <h2>Refernce and Materials</h2>
+       <p><a href="https://www.who.int/tools/growth-reference-data-for-5to19-years/indicators/bmi-for-age">refernces link-1</a></p>
+       <p><a href="https://en.wikipedia.org/wiki/Body_mass_index">refernces link-2</a></p>
+
+       
+        </div>
+        
+        <div class="loader hide-form">
+      <img src="/img/giphy.gif" alt="loader">
+        </div>
+
+    </section> 
+<script src="/js/page-js/fat-calculator.js"></script>   
+
+
+
+
+
+
+
