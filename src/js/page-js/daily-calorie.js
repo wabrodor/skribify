@@ -6,21 +6,24 @@ const btn = document.querySelector(".btn")
 const replay = document.querySelector(".replay")
 const weight = document.querySelector("#weight")
 const height = document.querySelector("#height")
-const gender = document.querySelector("#gender")
+const gen = document.querySelectorAll('input[name= gender]');
 const age = document.querySelector("#age")
 const activity = document.querySelector("#activity")
-const option = activity.options[activity.selectedIndex]
 
 
 btn.addEventListener("click", async (e)=>{
     e.preventDefault()
-    let genderValue = gender.value.toLowerCase().trim()
-    if(!(genderValue === "female" || genderValue === "male")){
-      alert.classList.remove("dismiss")
-      return
-    }
+
+    const option = activity.options[activity.selectedIndex]
+    let genderValue = "";
+
+    gen.forEach(val =>{
+      if(val.checked){
+      genderValue = val.value
+      }
+     })
+
     if ((height.value < 130  || height.value > 230 ||  height.value === "")) return
-    // if ((genderValue = "female") || (genderValue = "male")) return
     try {
     const url = `https://fitness-calculator.p.rapidapi.com/dailycalorie?age=${age.value}&gender=${genderValue}&weight=${weight.value}&height=${height.value}&activitylevel=${option.value}`
     
@@ -54,5 +57,5 @@ btn.addEventListener("click", async (e)=>{
     replay.addEventListener("click", (e)=>{ 
         e.preventDefault()
         result.innerHTML= ""
-        reset(height, gender, age, weight)
+        reset(height, age, weight)
       })

@@ -1,54 +1,38 @@
 ---
 layout: "base.njk"
 ---
-
 <section class ="form-container">
 
-      <form action="" class="wrapper needs-validation" novalidate>
+        <form action="" class="wrapper needs-validation" novalidate>
+
      <div class="heading-sect form-sect">
-      <p class="form-heading">
-       Daily calorie Intake Calculator
-      </p>
+      <p class="form-heading">healthy blood Calculator</p>
      </div>
  
 
+
    <div class="form-sect">
-    <p class = "sub-heading">select your gender</p>
-  <label for="female">female </label>
+       <p class = "sub-heading">select your gender</p>
+  <label for="female"> female </label>
 <input type="radio" name="gender" id="female" value="female">
   <label for="male"> male </label>
 <input type="radio" name="gender" id="male" value="male">
   </div>
 
-  <div class="form-sect">
-  <label for="age"> age </label>
-  <input id = "age" type="number" name="age" placeholder = "your age" class="form-control" >
-  </div>
-
-
 
      <div class="form-sect">
   <label for="weight"> weight </label>
-  <input id = "weight" type="number" name="age" placeholder = "weight in kg" class="form-control" required >
+  <input id = "weight" type="number"  placeholder = "weight in kg" class="form-control" required >
   </div>
 
-    <div class="form-sect">
+
+   <div class="form-sect">
   <label for="height"> height </label>
-  <input id = "height" type="number" name="height" placeholder = "height in cm" class="form-control" required >
+  <input id = "height" type="number"  placeholder = "height in kg" class="form-control" required >
   </div>
 
-<div class="form-sect">
-  <label for="activity">your activitry level</label>
-   <select name="activity" id="activity">
-  <option value="level_1">Sedentary: little or no exercise</option>
-   <option value="level_2">Exercise 1-3 times/week</option>
-    <option value="level_3">Exercise 4-5 times/week”</option>
-     <option value="level_4">Daily exercise or intense exercise 3-4 times/week</option>
-      <option value="level_5">Intense exercise 6-7 times/week</option>
-       <option value="level_6">Intense exercise 6-7 times/week</option>
-</select>
 
-</div>
+
 
 
 <button class="btn" type="submit">check</button>
@@ -97,9 +81,7 @@ The organs, tissues, and cells that form your body require water to function. If
         
         <div class="loader hide-form">
       <img src="/img/giphy.gif" alt="loader">
-        </div>
-
-
+      </div>
     </section> 
 
-<script defer src="/js/page-js/daily-calorie.js"></script>  
+    <script src="/js/page-js/blood.js"></script>
