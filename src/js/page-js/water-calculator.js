@@ -12,9 +12,10 @@ const activity = document.querySelector("#activity")
 btn.addEventListener("click", (e)=>{
     e.preventDefault()
   
-    if ((weight.value < 0  || weight.value > 230 ||  weight.value === "")) return
-    if ((activity.value < 0  || activity.value > 230 ||  activity.value === "")) return
- 
+if ((weight.value < 0  || weight.value > 230 ||  weight.value === "") || (activity.value < 0  || activity.value > 230 ||  activity.value === "")){
+    alert.classList.remove("dismiss")
+    return
+}
 
 const ounces = parseInt(calculateWater(weight.value, activity.value))
 const litres = roundDown((ounces/33.82), 2)
@@ -23,16 +24,25 @@ const cups = roundDown((litres * 3.51), 2)
 
 
     loader.classList.remove("hide-form")
-    result.innerHTML = `<p class = "result">all are in imperial units</p>
+
+    result.innerHTML = HtmlPurifier(`<p class = "result">all are in imperial units</p>
     <p class = "result result-bmi">in ounces = ${ounces}</p>
     <p class = "result  result-bmi"> in litres = ${litres}</p>
-    <p class = "result result-bmi"> in cups = ${cups}</p>`
+    <p class = "result result-bmi"> in cups = ${cups} cups</p>`)
+    const scrollHeight = resultSection.clientHeight
+
+    window.scrollTo({
+        top:scrollHeight,
+        left:0,
+        behavior:"smooth"
+    })
 
     
     setTimeout(() =>{
         loader.classList.add("hide-form")
         formSection.classList.add("hide-form")
         resultSection.classList.add("display-result")
+ 
     }, 500)
         
     })

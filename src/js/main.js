@@ -6,6 +6,10 @@ const alert = document.querySelector(".alert")
 const alertBtn = document.querySelector(".alert-content").children[1];
 
 
+const HtmlPurifier = (htmlInput)=>{
+return DOMPurify.sanitize( htmlInput, {USE_PROFILES: {html: true}} )
+}
+
 cookieBtn.addEventListener("click", ()=>{
   localStorage.setItem("cookieEnabled", "true")
   cookie.classList.add("disable-cookie")
@@ -19,7 +23,6 @@ setTimeout(() => {
 
 
 alertBtn.addEventListener("click", (e)=>{
-  reset(height, gender)
   alert.classList.add("dismiss")
   
 })

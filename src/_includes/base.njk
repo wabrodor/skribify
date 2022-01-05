@@ -38,8 +38,8 @@
         <link rel="stylesheet" href="/css/main.css">
 
         <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-        <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.4/purify.min.js"></script>
+        {# <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> #}
     </head>
 
 <body class = "">
@@ -123,7 +123,7 @@
    <!-- alert class -->
    <div class = "alert dismiss">
    <div class = "alert-content" >
-   <p>your input is wrong </p>
+   <p>you provided the wrong input, try again</p>
    <button class ="btn success"> ok </button>
    </div>
    </div>
@@ -209,11 +209,11 @@
         <button class="btn-cookie ">okay</button>
     </div>
 
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> 
+     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-    <script src="/js/vendor/bootstrap.min.js"></script>
+
+    <script defer src="/js/vendor/bootstrap.min.js"></script>
     
-    <script src="/js/main.js"></script>
+    <script defer src="/js/main.js"></script>
 </body>
 </html>

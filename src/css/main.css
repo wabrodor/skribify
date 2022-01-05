@@ -173,10 +173,19 @@ background:rgba(255, 0, 0, 0.514);
 .sub-heading{
     padding:1rem;
     font-size:18px;
-    margin:1rem;
+    margin:0.5rem;
     max-width:90%;
+    text-align: center;
+    line-height: 30px;
 }
 
+.radio-label{
+    font-size:18px;
+    margin:0.5em;
+    max-width:90%;
+    text-align: center;
+    line-height: 20px;  
+}
 label{
     display:inline-block;
     margin:0.7rem;
@@ -244,8 +253,13 @@ background:rgba(255, 0, 0, 0.514);
     max-width:900px;
     margin:auto 1rem;
 }
+.details h2{
+    margin-bottom:50px;
+    max-width:800px;
+    text-transform: capitalize;
+}
 .details p{
-    font-size:2rem;
+    font-size:1.75rem;
 }
 
 .details a{
@@ -339,12 +353,13 @@ text-align:center;
 
 
 .alert{
-    position:absolute;
+    position:fixed;
     inset:0;
+    width:100%;
     background:#000;
-    opacity:0.9;
     z-index:999;
     display:flex;
+    min-height:100vh;
     flex-direction: column;
     justify-content:flex-start;
     align-items: center;
@@ -394,6 +409,10 @@ margin-top:1rem;
         font-size:20px;
       
     }
+    .details h2{
+        margin-bottom:40px;
+        font-size:2.2rem;
+    }
 }
 
 
@@ -406,6 +425,9 @@ margin-top:1rem;
         background-color: rgba(0, 0, 0, 0.951);
         padding:1rem;
      
+    }
+    .sub-heading{
+        font-size: 16px;
     }
     .intro_sect{
         padding:1rem;

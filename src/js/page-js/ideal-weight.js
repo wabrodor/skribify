@@ -5,18 +5,31 @@ const loader = document.querySelector(".loader")
 const btn = document.querySelector(".btn")
 const replay = document.querySelector(".replay")
 const height = document.querySelector("#height")
-const gender = document.querySelector("#gender")
+const gender = document.querySelectorAll('input[name= gender]');
+
+let genderValue =""
 
 btn.addEventListener("click",  (e)=>{
 e.preventDefault()
-let genderValue = gender.value.toLowerCase().trim()
-if(!(genderValue === "female" || genderValue === "male")){
+gender.forEach(val  =>{
+  if(val.checked){
+    genderValue = val.value
+  }
+})
+
+if (!(height.value > 130 && height.value < 230) ||(!genderValue)){
   alert.classList.remove("dismiss")
   return
 }
+ //  scrollling bug fix
+ const scrollHeight = resultSection.clientHeight
 
-if ((height.value < 130  || height.value > 230 ||  height.value === "")) return
-// if ((genderValue = "female") || (genderValue = "male")) return
+ window.scrollTo({
+     top:scrollHeight,
+     left:0,
+     behavior:"smooth"
+ })
+
 getIdealWeightData(genderValue, height)
 
 })
@@ -25,7 +38,7 @@ getIdealWeightData(genderValue, height)
 replay.addEventListener("click", (e)=>{ 
   e.preventDefault()
   result.innerHTML= ""
-  reset(height, gender)
+  reset(height, genderValue)
 })
 
 async function  getIdealWeightData(genderValue, height){
@@ -43,10 +56,10 @@ async function  getIdealWeightData(genderValue, height){
        const response = await request.json()
     
    
-        result.innerHTML = `<p class = "result result-bmi">Robinson = ${response.data.Robinson}</p>
-        <p class = "result  result-bmi">Miller = ${response.data.Miller}</p>
-        <p class = "result result-bmi">Devine = ${response.data.Devine}</p>
-        <p class = "result result-bmi">Hamwi = ${response.data.Hamwi}</p>`
+        result.innerHTML = HtmlPurifier(`<p class = "result result-bmi">Robinson = ${response.data.Robinson}kg</p>
+        <p class = "result  result-bmi">Miller = ${response.data.Miller}kg</p>
+        <p class = "result result-bmi">Devine = ${response.data.Devine}kg</p>
+        <p class = "result result-bmi">Hamwi = ${response.data.Hamwi}kg</p>`)
     
     setTimeout(() =>{
       if(response)
@@ -56,6 +69,8 @@ async function  getIdealWeightData(genderValue, height){
     }, 500)
         
     }catch(error){
-      console.log(error)
+      loader.classList.add("hide-form")
+      alert.classList.remove("dismiss")
+      return
     }
 }

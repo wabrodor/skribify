@@ -13,13 +13,16 @@ layout: "base.njk"
      </div>
  
 
-  <div class="form-sect">
-  <label for="gender"> gender </label>
-  <input id = "gender" type="text" name="gender"placeholder = "male or female" class="form-control" required >
+    <div class="form-sect">
+    <p class = "radio-label">select your gender</p>
+  <label for="female">female </label>
+<input type="radio" name="gender" id="female" value="female">
+  <label for="male"> male </label>
+<input type="radio" name="gender" id="male" value="male">
   </div>
 
 <div class="form-sect">
-  <label for="height">height</label>
+  <label for="height">your height</label>
   <input id = "height" type="number" name="height" placeholder = "in centimeters (cm)" class="form-control"  required>
 </div>
 
@@ -31,9 +34,7 @@ layout: "base.njk"
 <div class="wrapper  result-sect">
   <h2>Your result</h2>
     <p> based on robbinson, miller, devine & hamwi </p>
-  <div class="result">
-      <p class= "result-bmi">your BMI = </p>
-     
+  <div class="result">   
   </div>
   
 
@@ -53,12 +54,13 @@ layout: "base.njk"
   </div>
 </div>
         <div class="details">
-          <h2>Ideal Weight Calculator:</h2>
-          <p>we will show your ideal weight in different classifications</p>
-           <p>ROBINSON</p> 
-           <p> MILLER</p>
-           <p> DEVINE</p>
-            <p>HAMWI</p>
+          <h2>IBW was coined based on historical data of weights for adult men and women that compared the relative mortality of persons</h2>
+          <p>Multiple ideal body weight formulas have been developed to assist physicians with dosing weight-based medications. Please confirm with your local pharmacy whether ideal or actual body weight should be used for medication dosing. </p>
+             <p>here we give you classification of ideal weight based on 4 important methods used globally </p>
+           <p>1) robbinson</p> 
+           <p>2) miller</p>
+           <p>3) devine</p>
+            <p>4) hamwi</p>
        <p></p>
          
        <h2>Refernce and Materials</h2>
@@ -74,6 +76,6 @@ layout: "base.njk"
 
 
     </section> 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.4/purify.min.js"></script>
 <script defer src="/js/page-js/ideal-weight.js"></script>  
    
