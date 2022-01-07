@@ -12,10 +12,21 @@ btn.addEventListener("click", (e)=>{
     e.preventDefault()
     const option = activity.options[activity.selectedIndex]
 
+    if(!(weight.value > 20 && weight.value < 180)){
+
+      alert.classList.remove("dismiss")
+      return
+    }
 
     loader.classList.remove("hide-form")
-    if((weight.value < 20 || weight.value > 200)) return
 
+    const scrollHeight = resultSection.clientHeight
+
+ window.scrollTo({
+     top:scrollHeight,
+     left:0,
+     behavior:"smooth"
+ })
     let protein = 0
 
     if(option.value === "1"){
@@ -34,7 +45,7 @@ btn.addEventListener("click", (e)=>{
         protein = 1.8 * weight.value
     }
 
-    result.innerHTML= `<p class= "result result-bmi"> your protien intake = ${protein} gm </p>`
+    result.innerHTML= `<p class= "result result-bmi">protien intake = ${protein} gm per day </p>`
 
     setTimeout(() =>{
             formSection.classList.add("hide-form")

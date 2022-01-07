@@ -15,6 +15,8 @@ btn.addEventListener("click", async (e)=>{
     e.preventDefault()
 
     const option = activity.options[activity.selectedIndex]
+
+    const optionValue = option.value
     let genderValue = "";
 
     gen.forEach(val =>{
@@ -23,9 +25,21 @@ btn.addEventListener("click", async (e)=>{
       }
      })
 
-    if ((height.value < 130  || height.value > 230 ||  height.value === "")) return
+    if (!(height.value > 130  && height.value < 230) || (!genderValue) || !(weight.value >10 && weight.value < 200) || !(age.value >10 && age.value < 80) || !(optionValue)){
+      alert.classList.remove("dismiss")
+      return
+    } 
+
+    const scrollHeight = resultSection.clientHeight
+
+    window.scrollTo({
+        top:scrollHeight,
+        left:0,
+        behavior:"smooth"
+    })
+
     try {
-    const url = `https://fitness-calculator.p.rapidapi.com/dailycalorie?age=${age.value}&gender=${genderValue}&weight=${weight.value}&height=${height.value}&activitylevel=${option.value}`
+    const url = `https://fitness-calculator.p.rapidapi.com/dailycalorie?age=${age.value}&gender=${genderValue}&weight=${weight.value}&height=${height.value}&activitylevel=${optionValue}`
     
         const request = await fetch(url, {
           "headers": {
@@ -36,14 +50,23 @@ btn.addEventListener("click", async (e)=>{
         
        const response = await request.json()
        const data = response.data
+
+       console.log(data)
        loader.classList.remove("hide-form")
     
     setTimeout(() =>{
           
           formSection.classList.add("hide-form")
+          if(!data) return
           resultSection.classList.add("display-result")
-          result.innerHTML  = `<p class = "result result-bmi">Basic metabolic rate = ${data.BMR}</p>
-          <p class = "result result-bmi">for extreme weight gain = ${data.goals["Extreme weight gain"].calory} calories</p>`
+          result.innerHTML  =  HtmlPurifier(`<p class = "result result-bmi">Basic metabolic rate = ${data.BMR}</p>
+          <p class = "result result-bmi">for extreme weight gain = ${data.goals["Extreme weight gain"].calory}calories per day</p>
+          <p class = "result result-bmi">for Extreme weight loss = ${data.goals["Extreme weight loss"].calory} calories per day</p>
+          <p class = "result result-bmi">for Mild weight gain" = ${data.goals["Mild weight gain"].calory} calories per day</p>
+          <p class = "result result-bmi">for Mild weight los = ${data.goals["Mild weight loss"].calory} calories per day</p>
+          <p class = "result result-bmi">for weight gain = ${data.goals["Weight gain"].calory} calories per day</p>
+          <p class = "result result-bmi">for  weight loss = ${data.goals["Weight loss"].calory} calories per day</p>`)
+          
           loader.classList.add("hide-form")
     }, 500)
         

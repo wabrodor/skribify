@@ -13,9 +13,14 @@ layout: "base.njk"
      
      </div>
  
-  <div class="form-sect">
-  <label for="gender">gender</label>
-  <input id = "gender" type="text" name="gender"placeholder = "your gender" class="form-control" required />
+
+
+    <div class="form-sect">
+    <p class = "radio-label">select your gender</p>
+  <label for="female">female </label>
+<input type="radio" name="gender" id="female" value="female">
+  <label for="male"> male </label>
+<input type="radio" name="gender" id="male" value="male">
   </div>
 
   <div class="form-sect">
@@ -36,16 +41,19 @@ layout: "base.njk"
 <div class="form-sect">
   <label for="neck">neck circumference</label>
   <input id = "neck" type="number" name="neck" placeholder = "in centimeters (cm)" class="form-control" required />
+   <img src="\img\neck-circum.png" alt="neck-circumference" class="radio-label-img">
 </div>
 
 <div class="form-sect">
   <label for="waist">waist circumference</label>
   <input id = "waist" type="number" name="waist" placeholder = "in centimeters (cm)" class="form-control" required />
+    <img src="\img\waist-circum.png" alt="waist-circumference" class="radio-label-img">
 </div>
 
 <div class="form-sect">
   <label for="hip">hip circumference</label>
   <input id = "hip" type="number" name="hip" placeholder = "in centimeters (cm)" class="form-control" required />
+  <img src= "\img\hip-cicum.png" alt="hip-circumference" class="radio-label-img">
 </div>
 
 <button class="btn" type="submit">check</button>

@@ -186,6 +186,12 @@ background:rgba(255, 0, 0, 0.514);
     text-align: center;
     line-height: 20px;  
 }
+.radio-label-img{
+    max-width:95%;
+    width:350px;
+    height:auto;
+    margin-top:1.5rem;
+}
 label{
     display:inline-block;
     margin:0.7rem;
@@ -320,6 +326,9 @@ text-align:center;
 .action{
     text-align:center;
 }
+.action p{
+    max-width:95%;
+}
 .replay{
     width:50%;
     padding:1rem 2rem;
@@ -426,6 +435,10 @@ margin-top:1rem;
         padding:1rem;
      
     }
+
+    .form-heading{
+        font-size:24px;
+    }
     .sub-heading{
         font-size: 16px;
     }
@@ -444,6 +457,10 @@ margin-top:1rem;
     .intro_list li{
         margin-bottom:1.5rem;
         font-size:16px;
+    }
+    .result-bmi {
+        font-size: 18px;
+        color:#ffff00;
     }
     i {
         margin-right:10px;
