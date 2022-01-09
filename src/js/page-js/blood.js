@@ -11,14 +11,19 @@ const gender = document.querySelectorAll('input[name= gender]');
 btn.addEventListener("click", (e) =>{
  e.preventDefault()
 let genderValue = ""
-let bloodVolume = 0
-const heightValue = height.value/100
 gender.forEach(val =>{
             if(val.checked){
               genderValue = val.value
             }
 
      })
+     if (!(height.value > 130 && height.value < 230) || (!genderValue) || !(weight.value >10 && weight.value < 100)){
+        alert.classList.remove("dismiss")
+        return
+      }
+
+     let bloodVolume = 0
+     const heightValue = height.value/100
      
 if(genderValue === "female"){
     bloodVolume = (0.3561 * Math.pow(heightValue , 3)) + (0.03308 * weight.value) + 0.1833
@@ -31,8 +36,7 @@ if(genderValue === "male"){
 
 
 loader.classList.remove("hide-form")
-    result.innerHTML = `<p class = "result">all are in imperial units</p>
-    <p class = "result result-bmi">your blood volume = ${roundDown(bloodVolume, 2)} litres</p>`
+    result.innerHTML = `<p class = "result result-bmi">your blood volume = ${roundDown(bloodVolume, 2)} litres</p>`
 
     setTimeout(() =>{
         loader.classList.add("hide-form")

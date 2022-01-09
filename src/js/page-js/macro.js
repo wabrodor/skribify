@@ -6,26 +6,31 @@ const btn = document.querySelector(".btn")
 const replay = document.querySelector(".replay")
 const weight = document.querySelector("#weight")
 const height = document.querySelector("#height")
-const gender = document.querySelector("#gender")
+const gender = document.querySelectorAll('input[name= gender]');
 const age = document.querySelector("#age")
 const activity = document.querySelector("#activity")
 const goals = document.querySelector("#goal")
 
+let genderValue = ""
 
 
 
 btn.addEventListener("click", async (e)=>{
     e.preventDefault()
+
+    gender.forEach(val  =>{
+      if(val.checked){
+        genderValue = val.value
+      }
+    })
+
     const goalsOptions = goals.options[goals.selectedIndex]
 const activityOptions = activity.options[activity.selectedIndex]
 
-    let genderValue = gender.value.toLowerCase().trim()
-    if(!(genderValue === "female" || genderValue === "male")){
-      alert.classList.remove("dismiss")
-      return
-    }
-    if ((height.value < 130  || height.value > 230 ||  height.value === "")) return
-    // if ((genderValue = "female") || (genderValue = "male")) return
+if (!(height.value > 130 && height.value < 230) || !(age.value > 10 && age.value < 100)  || (!genderValue) || !(weight.value >10 && weight.value < 100)){
+  alert.classList.remove("dismiss")
+  return
+}
     try {
     const url = `https://fitness-calculator.p.rapidapi.com/macrocalculator?age=${age.value}&gender=${genderValue}&height=${height.value}&weight=${weight.value}&activitylevel=${activityOptions.value}&goal=${goalsOptions.value}`
 
@@ -40,14 +45,39 @@ const activityOptions = activity.options[activity.selectedIndex]
         
        const response = await request.json()
        const data = response.data
-       console.log(data)
        loader.classList.remove("hide-form")
+
+       const scrollHeight = resultSection.clientHeight
+
+       window.scrollTo({
+           top:scrollHeight,
+           left:0,
+           behavior:"smooth"
+       })
     
     setTimeout(() =>{
-          
+          if(data)
+          console.log(data)
           formSection.classList.add("hide-form")
           resultSection.classList.add("display-result")
-          result.innerHTML  = ``;
+          result.innerHTML  = HtmlPurifier(`<h3 class= "result">Basic calorie= ${data.calorie} cal per day </h3>
+          <h3 class= "result">For balanced diet</h3>
+          <p class= "result result-bmi"> protein ${(data.balanced.protein).toFixed(2)}gm </p>
+          <p class= "result result-bmi"> fat ${(data.balanced.fat).toFixed(2)}gm </p>
+          <p class= "result result-bmi"> carbs ${(data.balanced.carbs).toFixed(2)}gm </p>
+          <h3 class= "result">For high protein diet</h3>
+          <p class= "result result-bmi"> protein ${(data.highprotein.protein).toFixed(2)}gm </p>
+          <p class= "result result-bmi"> fat ${(data.highprotein.fat).toFixed(2)}gm </p>
+          <p class= "result result-bmi"> carbs ${(data.highprotein.carbs).toFixed(2)}gm </p>
+          <h3 class= "result">For low carbs diet</h3>
+          <p class= "result result-bmi"> protein ${(data.lowcarbs.protein).toFixed(2)}gm </p>
+          <p class= "result result-bmi"> fat ${(data.lowcarbs.fat).toFixed(2)}gm </p>
+          <p class= "result result-bmi"> carbs ${(data.lowcarbs.carbs).toFixed(2)}gm </p>
+          <h3 class= "result">For low fats diet</h3>
+          <p class= "result result-bmi"> protein ${(data.lowfat.protein).toFixed(2)}gm </p>
+          <p class= "result result-bmi"> fat ${(data.lowfat.fat).toFixed(2)}gm </p>
+          <p class= "result result-bmi"> carbs ${(data.lowfat.carbs).toFixed(2)}gm </p>
+          `);
           loader.classList.add("hide-form")
     }, 500)
         

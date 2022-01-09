@@ -45,7 +45,7 @@ btn.addEventListener("click", (e)=>{
         protein = 1.8 * weight.value
     }
 
-    result.innerHTML= `<p class= "result result-bmi">protien intake = ${protein} gm per day </p>`
+    result.innerHTML= HtmlPurifier(`<p class= "result result-bmi">protien intake = ${protein} gm per day </p>`)
 
     setTimeout(() =>{
             formSection.classList.add("hide-form")
