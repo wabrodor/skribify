@@ -52,9 +52,17 @@ const handleSubmit = (e) => {
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => console.log("Form successfully submitted"))
-    .catch((error) => alert(error));
-};
+    .then(() =>{
+      console.log("Form successfully submitted");
+      //get the closable setting value.
+const notification = alertify.notify("form submitted", "success", 5, function () {
+  console.log("dismissed");
+});
+    })
+    .catch((error) => {
+ alertify.error('oh! form not submitted');
+    })
+  }
 
 const form = document.querySelector("form").addEventListener("submit", handleSubmit);
 
@@ -74,6 +82,7 @@ jQuery(document).ready(function($) {
           
           // open modal when click on open modal button 
           modBtn.on('click', function() {
+       
             modal.css('display', 'block');
             modContent.removeClass('modal-animated-out').addClass('modal-animated-in');
           });
@@ -84,6 +93,7 @@ jQuery(document).ready(function($) {
             if(target.is(modal) || target.is(close)) {
               modContent.removeClass('modal-animated-in').addClass('modal-animated-out').delay(300).queue(function(next) {
                 modal.css('display', 'none');
+                
                 next();
               });
             }

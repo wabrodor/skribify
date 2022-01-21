@@ -57,7 +57,21 @@ btn.addEventListener("click", async (e)=>{
     setTimeout(() =>{
           
           formSection.classList.add("hide-form")
-          if(!data) return
+          if(!data){
+            alertify.confirm(
+              "oh! error",
+              "Confirm Message",
+              function () {
+                alertify.success("Ok");
+              },
+              function () {
+                alertify.error("Cancel");
+              }
+            );
+            Run;
+            Overloads;
+            return
+          }
           resultSection.classList.add("display-result")
           result.innerHTML  =  HtmlPurifier(`<p class = "result result-bmi">Basic metabolic rate = ${data.BMR}</p>
           <p class = "result result-bmi">for extreme weight gain = ${data.goals["Extreme weight gain"].calory}calories per day</p>
