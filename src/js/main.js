@@ -43,6 +43,21 @@ function closeBtn(){
   popupMenu.classList.remove("open")
   popupMenuIcon.classList.remove("active")
 }
+const handleSubmit = (e) => {
+  e.preventDefault();
+  let myForm = document.getElementById("contact");
+  let formData = new FormData(myForm);
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => console.log("Form successfully submitted"))
+    .catch((error) => alert(error));
+};
+
+const form = document.querySelector("form").addEventListener("submit", handleSubmit);
+
 
 
 jQuery(document).ready(function($) {
