@@ -36,6 +36,13 @@ function reset(height,...all){
   }
 }
 
+function closeBtn(){
+  const popupMenu = document.querySelector(".overlay-menu");
+  const popupMenuIcon = document.querySelector(".menu-icon");
+  console.log(popupMenu)
+  popupMenu.classList.remove("open")
+  popupMenuIcon.classList.remove("active")
+}
 
 
 jQuery(document).ready(function($) {

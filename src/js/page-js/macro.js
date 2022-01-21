@@ -16,8 +16,6 @@ const goals = document.querySelector("#goal")
 let genderValue = ""
 
 
-// eventlisteners
-
 btn.addEventListener("click", (e)=>{
     e.preventDefault()
     errorChecking(gender, height, age, genderValue, weight)
@@ -29,11 +27,7 @@ replay.addEventListener("click", (e)=>{
         result.innerHTML= ""
         reset(height, gender, age, weight)
       })
-
-
-  // functions
-
-      
+    
      const  errorChecking = (gender,height, age, genderValue, weight) => {
 
         gender.forEach(val  =>{
@@ -48,7 +42,7 @@ replay.addEventListener("click", (e)=>{
           alert.classList.remove("dismiss")
           return
         }else{
-          
+
           getData(age, genderValue, height, weight, activityOptions, goalsOptions)
         }
         

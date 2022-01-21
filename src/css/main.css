@@ -64,14 +64,11 @@ i {
 }
 
 .privacy-policy{
-background-color: #000;
+background-color: rgba(0, 0, 0, 0.904);
+padding: 1rem 4rem;
+color:#fff;
 }
-.privacy-policy-content{
-    margin-top:6rem;
-    padding:2rem 1rem;
-    color:#fff;
-  
-}
+
 
 .cookie-container{
     position:absolute;
