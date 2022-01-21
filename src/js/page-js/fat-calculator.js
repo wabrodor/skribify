@@ -44,21 +44,23 @@ btn.addEventListener("click", async (e)=>{
     const url = `https://fitness-calculator.p.rapidapi.com/bodyfat?age=${age.value}&gender=${genderValue}&weight=${weight.value}&height=${height.value}&neck=${neck.value}&waist=${waist.value}&hip=${hip.value}`
     
         const request = await fetch(url, {
-          "headers": {
+          headers: {
             "x-rapidapi-host": "fitness-calculator.p.rapidapi.com",
-            "x-rapidapi-key": "74df0ed0e5msh4aeaf247442fb6fp1a666fjsn4b179e3a70ca"
-          }
-        })
+            "x-rapidapi-key":
+              "74df0ed0e5msh4aeaf247442fb6fp1a666fjsn4b179e3a70ca",
+          },
+        });
         
        const response = await request.json()
        loader.classList.remove("hide-form")
+        dataChecker(response.data);
         result.innerHTML =  HtmlPurifier(`<p class = "result result-bmi">Body Fat (U.S Navy method) = ${response.data["Body Fat (U.S. Navy Method)"]}%</p>
         <p class = "result result-bmi"> Body Fat Mass = ${response.data["Body Fat Mass"]} Kg</p>
         <p class = "result result-bmi"> Lean Body Mass =  ${response.data["Lean Body Mass"]}Kg </p>
         <p class = "result result-bmi"> Body Fat (BMI method) =  ${response.data["Body Fat (BMI method)"]}% </p>`)
     
     setTimeout(() =>{
-      if(response)
+
           loader.classList.add("hide-form")
           formSection.classList.add("hide-form")
           resultSection.classList.add("display-result")
@@ -66,7 +68,7 @@ btn.addEventListener("click", async (e)=>{
     }, 500)
         
     }catch(error){
-      console.log(error)
+      console.log("error")
     }
     
     })

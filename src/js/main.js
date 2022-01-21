@@ -67,6 +67,27 @@ const notification = alertify.notify("form submitted", "success", 5, function ()
 const form = document.querySelector("form").addEventListener("submit", handleSubmit);
 
 
+const redirectPage = () => {
+  location.href = "/";
+};
+
+
+// ok
+
+function dataChecker(data){
+          if (!data) {
+            alertify.alert(
+              "oh error!",
+              "we have some problem processing your request please try again",
+              function () {
+                alertify.success("Ok", redirectPage());
+              }
+            );
+            Run;
+            Overloads;
+            return;
+          }
+}
 
 jQuery(document).ready(function($) {
 

@@ -58,11 +58,12 @@ replay.addEventListener("click", (e)=>{
       
         
             const request = await fetch(url, {
-              "headers": {
+              headers: {
                 "x-rapidapi-host": "fitness-calculator.p.rapidapi.com",
-                "x-rapidapi-key": "74df0ed0e5msh4aeaf247442fb6fp1a666fjsn4b179e3a70ca"
-              }
-            })
+                "x-rapidapi-key":
+                  "74df0ed0e5msh4aeaf247442fb6fp1a666fjsn4b179e3a70ca",
+              },
+            });
             
            const response = await request.json()
            const data = await response.data
@@ -79,8 +80,7 @@ replay.addEventListener("click", (e)=>{
            })
         
         setTimeout(() =>{
-              if(data)
-              console.log(data)
+                dataChecker(response.data);
               formSection.classList.add("hide-form")
               resultSection.classList.add("display-result")
               result.innerHTML  = HtmlPurifier(`<h3 class= "result">Basic calorie= ${data.calorie} cal per day </h3>

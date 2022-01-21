@@ -42,11 +42,12 @@ btn.addEventListener("click", async (e)=>{
     const url = `https://fitness-calculator.p.rapidapi.com/dailycalorie?age=${age.value}&gender=${genderValue}&weight=${weight.value}&height=${height.value}&activitylevel=${optionValue}`
     
         const request = await fetch(url, {
-          "headers": {
+          headers: {
             "x-rapidapi-host": "fitness-calculator.p.rapidapi.com",
-            "x-rapidapi-key": "74df0ed0e5msh4aeaf247442fb6fp1a666fjsn4b179e3a70ca"
-          }
-        })
+            "x-rapidapi-key":
+              "74df0ed0e5msh4aeaf247442fb6fp1a666fjsn4b179e3a70ca",
+          },
+        });
         
        const response = await request.json()
        const data = response.data
@@ -57,21 +58,7 @@ btn.addEventListener("click", async (e)=>{
     setTimeout(() =>{
           
           formSection.classList.add("hide-form")
-          if(!data){
-            alertify.confirm(
-              "oh! error",
-              "Confirm Message",
-              function () {
-                alertify.success("Ok");
-              },
-              function () {
-                alertify.error("Cancel");
-              }
-            );
-            Run;
-            Overloads;
-            return
-          }
+          dataChecker(data)
           resultSection.classList.add("display-result")
           result.innerHTML  =  HtmlPurifier(`<p class = "result result-bmi">Basic metabolic rate = ${data.BMR}</p>
           <p class = "result result-bmi">for extreme weight gain = ${data.goals["Extreme weight gain"].calory}calories per day</p>
@@ -85,7 +72,7 @@ btn.addEventListener("click", async (e)=>{
     }, 500)
         
     }catch(error){
-      console.log(error)
+      console.log(error);
     }
     
     })

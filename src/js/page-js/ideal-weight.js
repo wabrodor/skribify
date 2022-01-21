@@ -47,14 +47,15 @@ async function  getIdealWeightData(genderValue, height){
     const url = `https://fitness-calculator.p.rapidapi.com/idealweight?gender=${genderValue}&height=${height.value}`
     
         const request = await fetch(url, {
-          "headers": {
+          headers: {
             "x-rapidapi-host": "fitness-calculator.p.rapidapi.com",
-            "x-rapidapi-key": "74df0ed0e5msh4aeaf247442fb6fp1a666fjsn4b179e3a70ca"
-          }
-        })
+            "x-rapidapi-key":
+              "74df0ed0e5msh4aeaf247442fb6fp1a666fjsn4b179e3a70ca",
+          },
+        });
         
        const response = await request.json()
-    
+        dataChecker(response.data);
    
         result.innerHTML = HtmlPurifier(`<p class = "result result-bmi">Robinson = ${response.data.Robinson}kg</p>
         <p class = "result  result-bmi">Miller = ${response.data.Miller}kg</p>
@@ -62,15 +63,15 @@ async function  getIdealWeightData(genderValue, height){
         <p class = "result result-bmi">Hamwi = ${response.data.Hamwi}kg</p>`)
     
     setTimeout(() =>{
-      if(response)
+       
           formSection.classList.add("hide-form")
           resultSection.classList.add("display-result")
           loader.classList.add("hide-form")
     }, 500)
         
     }catch(error){
-      loader.classList.add("hide-form")
-      alert.classList.remove("dismiss")
-      return
+      // loader.classList.add("hide-form")
+      // alert.classList.remove("dismiss")
+      // return
     }
 }
