@@ -1,66 +1,36 @@
-const formSection = document.querySelector(".wrapper")
-const resultSection = document.querySelector(".result-sect")
-const result = document.querySelector(".result")
-const loader = document.querySelector(".loader")
-const btn = document.querySelector(".btn")
-const replay = document.querySelector(".replay")
-const weight = document.querySelector("#weight")
-const activity = document.querySelector("#activity");
-
-
-btn.addEventListener("click", (e)=>{
-    e.preventDefault()
-    const option = activity.options[activity.selectedIndex]
-
-    if(!(weight.value > 20 && weight.value < 180)){
-
-      alert.classList.remove("dismiss")
-      return
-    }
-
-    loader.classList.remove("hide-form")
-
-    const scrollHeight = resultSection.clientHeight
-
- window.scrollTo({
-     top:scrollHeight,
-     left:0,
-     behavior:"smooth"
- })
-    let protein = 0
-
-    if(option.value === "1"){
-      protein = 0.8 * weight.value
-    }
-
-
-   else if(option.value === "2"){
-        protein = 1.2 * weight.value
-    }
-   else if(option.value === "3"){
-        protein = 1.4 * weight.value
-    }
-
-    else if(option.value === "4"){
-        protein = 1.8 * weight.value
-    }
-
-    result.innerHTML= HtmlPurifier(`<p class= "result result-bmi">protien intake = ${protein} gm per day </p>`)
-
-    setTimeout(() =>{
-            formSection.classList.add("hide-form")
-            resultSection.classList.add("display-result")
-            loader.classList.add("hide-form")
-      }, 500)
-
-})
-
-
-
-replay.addEventListener("click", (e)=>{ 
-    e.preventDefault()
-    result.innerHTML= ""
-    reset(weight)
-  })
-
-
+const formSection = document.querySelector(".wrapper"),
+  resultSection = document.querySelector(".result-sect"),
+  result = document.querySelector(".result"),
+  loader = document.querySelector(".loader"),
+  btn = document.querySelector(".btn"),
+  replay = document.querySelector(".replay"),
+  weight = document.querySelector("#weight"),
+  activity = document.querySelector("#activity");
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const t = activity.options[activity.selectedIndex];
+  if (!(weight.value > 20 && weight.value < 180))
+    return void alert.classList.remove("dismiss");
+  loader.classList.remove("hide-form");
+  const r = resultSection.clientHeight;
+  window.scrollTo({ top: r, left: 0, behavior: "smooth" });
+  let l = 0;
+  "1" === t.value
+    ? (l = 0.8 * weight.value)
+    : "2" === t.value
+    ? (l = 1.2 * weight.value)
+    : "3" === t.value
+    ? (l = 1.4 * weight.value)
+    : "4" === t.value && (l = 1.8 * weight.value),
+    (result.innerHTML = HtmlPurifier(
+      `<p class= "result result-bmi">protien intake = ${l} gm per day </p>`
+    )),
+    setTimeout(() => {
+      formSection.classList.add("hide-form"),
+        resultSection.classList.add("display-result"),
+        loader.classList.add("hide-form");
+    }, 500);
+}),
+  replay.addEventListener("click", (e) => {
+    e.preventDefault(), (result.innerHTML = ""), reset(weight);
+  });

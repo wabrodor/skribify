@@ -1,85 +1,61 @@
-const formSection = document.querySelector(".wrapper")
-const resultSection = document.querySelector(".result-sect")
-const result = document.querySelector(".result")
-const loader = document.querySelector(".loader")
-const btn = document.querySelector(".btn")
-const replay = document.querySelector(".replay")
-const weight = document.querySelector("#weight")
-const height = document.querySelector("#height")
-const gen = document.querySelectorAll('input[name= gender]');
-const age = document.querySelector("#age")
-const activity = document.querySelector("#activity")
-
-
-btn.addEventListener("click", async (e)=>{
-    e.preventDefault()
-
-    const option = activity.options[activity.selectedIndex]
-
-    const optionValue = option.value
-    let genderValue = "";
-
-    gen.forEach(val =>{
-      if(val.checked){
-      genderValue = val.value
-      }
-     })
-
-    if (!(height.value > 130  && height.value < 230) || (!genderValue) || !(weight.value >10 && weight.value < 200) || !(age.value >10 && age.value < 80) || !(optionValue)){
-      alert.classList.remove("dismiss")
-      return
-    } 
-
-    const scrollHeight = resultSection.clientHeight
-
-    window.scrollTo({
-        top:scrollHeight,
-        left:0,
-        behavior:"smooth"
-    })
-
-    try {
-    const url = `https://fitness-calculator.p.rapidapi.com/dailycalorie?age=${age.value}&gender=${genderValue}&weight=${weight.value}&height=${height.value}&activitylevel=${optionValue}`
-    
-        const request = await fetch(url, {
-          headers: {
-            "x-rapidapi-host": "fitness-calculator.p.rapidapi.com",
-            "x-rapidapi-key":
-              "74df0ed0e5msh4aeaf247442fb6fp1a666fjsn4b179e3a70ca",
-          },
-        });
-        
-       const response = await request.json()
-       const data = response.data
-
-       console.log(data)
-       loader.classList.remove("hide-form")
-    
-    setTimeout(() =>{
-          
-          formSection.classList.add("hide-form")
-          dataChecker(data)
-          resultSection.classList.add("display-result")
-          result.innerHTML  =  HtmlPurifier(`<p class = "result result-bmi">Basic metabolic rate = ${data.BMR}</p>
-          <p class = "result result-bmi">for extreme weight gain = ${data.goals["Extreme weight gain"].calory}calories per day</p>
-          <p class = "result result-bmi">for Extreme weight loss = ${data.goals["Extreme weight loss"].calory} calories per day</p>
-          <p class = "result result-bmi">for Mild weight gain" = ${data.goals["Mild weight gain"].calory} calories per day</p>
-          <p class = "result result-bmi">for Mild weight los = ${data.goals["Mild weight loss"].calory} calories per day</p>
-          <p class = "result result-bmi">for weight gain = ${data.goals["Weight gain"].calory} calories per day</p>
-          <p class = "result result-bmi">for  weight loss = ${data.goals["Weight loss"].calory} calories per day</p>`)
-          
-          loader.classList.add("hide-form")
-    }, 500)
-        
-    }catch(error){
-      console.log(error);
-    }
-    
-    })
-
-
-    replay.addEventListener("click", (e)=>{ 
-        e.preventDefault()
-        result.innerHTML= ""
-        reset(height, age, weight)
-      })
+const formSection = document.querySelector(".wrapper"),
+  resultSection = document.querySelector(".result-sect"),
+  result = document.querySelector(".result"),
+  loader = document.querySelector(".loader"),
+  btn = document.querySelector(".btn"),
+  replay = document.querySelector(".replay"),
+  weight = document.querySelector("#weight"),
+  height = document.querySelector("#height"),
+  gen = document.querySelectorAll("input[name= gender]"),
+  age = document.querySelector("#age"),
+  activity = document.querySelector("#activity");
+btn.addEventListener("click", async (e) => {
+  e.preventDefault();
+  const t = activity.options[activity.selectedIndex].value;
+  let l = "";
+  if (
+    (gen.forEach((e) => {
+      e.checked && (l = e.value);
+    }),
+    !(
+      height.value > 130 &&
+      height.value < 230 &&
+      l &&
+      weight.value > 10 &&
+      weight.value < 200 &&
+      age.value > 10 &&
+      age.value < 80 &&
+      t
+    ))
+  )
+    return void alert.classList.remove("dismiss");
+  const a = resultSection.clientHeight;
+  window.scrollTo({ top: a, left: 0, behavior: "smooth" });
+  try {
+    const e = `https://fitness-calculator.p.rapidapi.com/dailycalorie?age=${age.value}&gender=${l}&weight=${weight.value}&height=${height.value}&activitylevel=${t}`,
+      a = await fetch(e, {
+        headers: {
+          "x-rapidapi-host": "fitness-calculator.p.rapidapi.com",
+          "x-rapidapi-key":
+            "74df0ed0e5msh4aeaf247442fb6fp1a666fjsn4b179e3a70ca",
+        },
+      }),
+      r = (await a.json()).data;
+    console.log(r),
+      loader.classList.remove("hide-form"),
+      setTimeout(() => {
+        formSection.classList.add("hide-form"),
+          dataChecker(r),
+          resultSection.classList.add("display-result"),
+          (result.innerHTML = HtmlPurifier(
+            `<p class = "result result-bmi">Basic metabolic rate = ${r.BMR}</p>\n          <p class = "result result-bmi">for extreme weight gain = ${r.goals["Extreme weight gain"].calory}calories per day</p>\n          <p class = "result result-bmi">for Extreme weight loss = ${r.goals["Extreme weight loss"].calory} calories per day</p>\n          <p class = "result result-bmi">for Mild weight gain" = ${r.goals["Mild weight gain"].calory} calories per day</p>\n          <p class = "result result-bmi">for Mild weight los = ${r.goals["Mild weight loss"].calory} calories per day</p>\n          <p class = "result result-bmi">for weight gain = ${r.goals["Weight gain"].calory} calories per day</p>\n          <p class = "result result-bmi">for  weight loss = ${r.goals["Weight loss"].calory} calories per day</p>`
+          )),
+          loader.classList.add("hide-form");
+      }, 500);
+  } catch (e) {
+    console.log(e);
+  }
+}),
+  replay.addEventListener("click", (e) => {
+    e.preventDefault(), (result.innerHTML = ""), reset(height, age, weight);
+  });
